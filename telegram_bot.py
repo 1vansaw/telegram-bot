@@ -50,7 +50,7 @@ async def set_main_menu(bot: Bot):
 
 
 storage = MemoryStorage()
-session = AiohttpSession()  # proxy="http://proxy.server:3128"
+session = AiohttpSession(proxy="http://proxy.server:3128")  # proxy="http://proxy.server:3128"
 bot = Bot(token=BOT_TOKEN, session=session)
 dp = Dispatcher(storage=storage)
 dp.include_router(router)
